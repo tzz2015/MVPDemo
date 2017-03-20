@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRoot"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:paddingLeft="@dimen/space20"
+    android:paddingRight="@dimen/space20"
+    android:paddingBottom="@dimen/space20"
+    android:background="@color/color_99000000">
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_top_choose"
+        android:background="@drawable/white_big_corners_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space104"
+        android:gravity="center"
+        android:text="上报出货异常"
+        android:textColor="@color/color_303233"
+        android:textSize="@dimen/font32" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       >
+        <LinearLayout
+            android:visibility="visible"
+            android:background="@drawable/white_top_corners_bg"
+            android:id="@+id/ll_ps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/space104"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/transparent"
+                android:text="拍摄"
+                android:textColor="@color/color_303233"
+                android:textSize="@dimen/font34" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space1"
+                android:background="@color/color_e4e5e6" />
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="visible"
+            android:background="@drawable/white_bottom_corners_bg"
+            android:id="@+id/ll_choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/space104"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/transparent"
+                android:text="从相册选择"
+                android:textColor="@color/color_303233"
+                android:textSize="@dimen/font34" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space18"
+          />
+        <LinearLayout
+            android:background="@drawable/white_big_corners_bg"
+            android:id="@+id/ll_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space104">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#22c0ff"
+                android:textSize="@dimen/font32" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

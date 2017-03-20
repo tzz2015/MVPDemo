@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/space104"
+    android:orientation="vertical"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/transparent"
+        android:text="互相关注的人"
+        android:textColor="@color/color_303233"
+        android:textSize="@dimen/font34" />
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space1"
+        android:background="@color/color_e4e5e6" />
+</LinearLayout>
