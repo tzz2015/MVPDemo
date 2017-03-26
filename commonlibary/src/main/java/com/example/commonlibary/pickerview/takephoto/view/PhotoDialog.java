@@ -40,7 +40,9 @@ public class PhotoDialog {
         type = photoModel.type;
         list.clear();
         list.addAll(photoModel.stringList);
-        context.startActivity(new Intent(context, CameraActivity.class));
+        Intent intent = new Intent(context, CameraActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
     /**
      * 处理结果

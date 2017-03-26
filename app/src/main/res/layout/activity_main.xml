@@ -14,6 +14,16 @@
           android:text="网络请求"
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
+      <Button
+          android:id="@+id/bt_city"
+          android:text="城市时间选择器"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+      <Button
+          android:id="@+id/bt_photo"
+          android:text="图片选择"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
   </LinearLayout>
 
 </ScrollView>

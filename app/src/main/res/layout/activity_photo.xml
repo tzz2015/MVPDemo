@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+   <include layout="@layout/common_back_title"/>
+    <Button
+        android:id="@+id/bt_single_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="单张图片" />
+
+    <Button
+        android:id="@+id/bt_single_grop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="单张裁剪" />
+
+    <ImageView
+        android:id="@+id/iv_show"
+        android:layout_width="@dimen/space100"
+        android:layout_height="@dimen/space100" />
+    <Button
+        android:text="图片浏览器"
+        android:id="@+id/bt_brower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="@dimen/space20"
+        android:layout_marginBottom="@dimen/space20"
+        android:background="@color/white"
+        android:minHeight="@dimen/space204"
+        android:padding="@dimen/space20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.example.fwms.myapplication.view.InScrollGridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="3dp"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:verticalSpacing="5dp" />
+    </LinearLayout>
+
+</LinearLayout>

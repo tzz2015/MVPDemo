@@ -4,10 +4,12 @@ import android.content.Context;
 import android.util.Log;
 
 import com.bigkoo.pickerview.OptionsPickerView;
+import com.bigkoo.pickerview.TimePickerView;
 import com.google.gson.Gson;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -138,4 +140,25 @@ public class PickUtil {
     }
 
 
+    public static  void showTime(Context context, final SelectTimeLisener lisener){
+        TimePickerView pvTime= new TimePickerView(context, TimePickerView.Type.YEAR_MONTH_DAY);
+
+
+        pvTime.setCyclic(false);
+        pvTime.setCancelable(true);
+        pvTime.setTitle("选择日期");
+
+        pvTime.setOnTimeSelectListener(new TimePickerView.OnTimeSelectListener() {
+
+            @Override
+            public void onTimeSelect(Date date) {
+                lisener.timeBack(date);
+            }
+        });
+        pvTime.show();
+    }
+
+    public interface SelectTimeLisener{
+        void timeBack(Date date);
+    }
 }

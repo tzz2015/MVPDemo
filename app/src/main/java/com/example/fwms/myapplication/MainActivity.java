@@ -2,15 +2,15 @@ package com.example.fwms.myapplication;
 
 import android.Manifest;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.fwms.myapplication.activity.PhotoActivity;
+import com.example.fwms.myapplication.activity.SelectActivity;
 import com.example.fwms.myapplication.base.activtiy.BaseActivity;
 import com.example.fwms.myapplication.net.activity.NetActivity;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -36,12 +36,18 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    @OnClick({R.id.bt_net})
+    @OnClick({R.id.bt_net,R.id.bt_city,R.id.bt_photo})
     public void onClick(View view){
         Intent intent=null;
         switch (view.getId()){
             case R.id.bt_net://网络请求例子
                 intent=new Intent(this, NetActivity.class);
+                break;
+            case R.id.bt_city://城市选择
+                intent=new Intent(this, SelectActivity.class);
+                break;
+            case R.id.bt_photo://图片选择
+                intent=new Intent(this, PhotoActivity.class);
                 break;
         }
         startActivity(intent);
@@ -52,10 +58,4 @@ public class MainActivity extends BaseActivity {
     }
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 }
