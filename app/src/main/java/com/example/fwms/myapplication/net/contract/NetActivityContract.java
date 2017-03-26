@@ -4,7 +4,6 @@ import com.example.fwms.myapplication.base.prensenter.BasePresenter;
 import com.example.fwms.myapplication.base.view.BaseView;
 
 /**
- * 杭州融科网络
  * 刘宇飞 创建 on 2017/3/20.
  * 描述：
  */

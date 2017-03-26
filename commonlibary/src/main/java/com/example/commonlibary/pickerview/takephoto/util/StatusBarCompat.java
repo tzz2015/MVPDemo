@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * 公司：杭州融科网络科技
  * 刘宇飞 创建 on 2017/3/3.
  * 描述：沉浸栏工具
  */

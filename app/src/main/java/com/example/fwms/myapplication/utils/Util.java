@@ -42,7 +42,6 @@ import static com.example.fwms.myapplication.App.getHandler;
 
 
 /**
- * 公司：杭州融科网络科技
  * 刘宇飞 创建 on 2017/3/2.
  * 描述：工具类
  */

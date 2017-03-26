@@ -1,7 +1,6 @@
 package com.example.fwms.myapplication.net.modle;
 
 /**
- * 公司：融科网络
  * 刘宇飞创建 on 2017/3/20.
  * 描述： 企业信息
  */

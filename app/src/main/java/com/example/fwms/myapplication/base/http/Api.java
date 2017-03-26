@@ -2,7 +2,6 @@ package com.example.fwms.myapplication.base.http;
 
 
 /**
- * 公司：杭州融科网络科技
  * 刘宇飞 创建 on 2017/3/16.
  * 描述：
  */

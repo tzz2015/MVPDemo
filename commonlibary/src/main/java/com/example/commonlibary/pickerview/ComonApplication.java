@@ -13,7 +13,6 @@ import cn.finalteam.galleryfinal.GalleryFinal;
 import cn.finalteam.galleryfinal.ThemeConfig;
 
 /**
- * 杭州融科网络
  * 刘宇飞 创建 on 2017/3/20.
  * 描述：
  */
