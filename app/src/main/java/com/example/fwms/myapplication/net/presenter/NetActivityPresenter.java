@@ -59,7 +59,7 @@ public class NetActivityPresenter extends NetActivityContract.Presenter implemen
 //        httpPresenter.request(observable, Constants.REQUESTID_0,this,this);
 
         Observable observable = httpTask.requestCompanybycode(Map2String(map));
-        // HttpPresenter<请求成功返回的对象，也可以是list<对象>>  如： HttpPresenter<List<CompanyInfoModle>>
+        // HttpPresenter<请求成功返回的对象> ，也可以是list<对象> 如： HttpPresenter<List<CompanyInfoModle>>
         HttpPresenter<CompanyInfoModle> httpPresenter = new HttpPresenter<>();
         httpPresenter.request(observable, Constants.REQUESTID_0, this, mContext);
     }
