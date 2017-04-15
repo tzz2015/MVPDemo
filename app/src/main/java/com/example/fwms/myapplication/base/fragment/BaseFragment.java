@@ -61,7 +61,7 @@ public abstract class BaseFragment<T extends BasePresenter> extends Fragment {
 	public View onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
 		View view=inflater.inflate(getLayoutViewId(),null);
 		ButterKnife.bind(this,view);
-		EventBus.getDefault().register(this);
+		registerEvenbus();
 		context=getContext();
 		mCompositeSubscription = new CompositeSubscription();
 		mPresenter = TUtil.getT(this, 0);
@@ -75,6 +75,11 @@ public abstract class BaseFragment<T extends BasePresenter> extends Fragment {
 		initPresenter();
 		initView();
 		return view;
+	}
+	private void registerEvenbus() {
+		if(!EventBus.getDefault().isRegistered(this.getClass().toString())){
+			EventBus.getDefault().register(this.getClass().toString());
+		}
 	}
 
 	protected abstract void initPresenter();

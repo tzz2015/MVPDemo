@@ -11,7 +11,7 @@ public class Api {
     /**
      * 业主的基础URL
      */
-    public static String BASE_YEZHU_URL = "http://106.14.20.156:8083/AppCloudServer/";
+    public static String BASE_YEZHU_URL = "http://ataits.com:8089/AppCloudServer/";
     /**
      * 中间平台的基础URL
      */
@@ -44,6 +44,6 @@ public class Api {
     /**
      * 11.6.6业主绑定 点击单位名称查看详情
      */
-    public static final String QUERYAPP_COMPANYBYCODE="queryAppCompanyByCode.htm";
+    public static final String QUERYAPP_COMPANYBYCODE="appQueryByEmployeeId.htm";
 
 }

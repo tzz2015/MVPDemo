@@ -66,7 +66,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends FragmentActi
         LogUtil.getInstance().e(this.getClass().toString());
         setContentView(getLayoutViewId());
         ButterKnife.bind(this);
-        EventBus.getDefault().register(this);
+        registerEvenbus();
         //管理网络请求
         mCompositeSubscription = new CompositeSubscription();
         context = this;
@@ -80,6 +80,12 @@ public abstract class BaseActivity<T extends BasePresenter> extends FragmentActi
         initPresenter();
         initView();
 
+    }
+
+    private void registerEvenbus() {
+        if(!EventBus.getDefault().isRegistered(this.getClass().toString())){
+            EventBus.getDefault().register(this.getClass().toString());
+        }
     }
 
 

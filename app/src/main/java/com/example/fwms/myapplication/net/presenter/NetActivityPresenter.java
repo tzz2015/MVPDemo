@@ -4,7 +4,6 @@ import android.os.Environment;
 
 import com.example.fwms.myapplication.base.http.Api;
 import com.example.fwms.myapplication.base.http.ComRequestUtil;
-import com.example.fwms.myapplication.base.http.HttpClient;
 import com.example.fwms.myapplication.base.http.HttpPresenter;
 import com.example.fwms.myapplication.base.http.HttpTask;
 import com.example.fwms.myapplication.base.http.HttpTaskListener;
@@ -36,7 +35,7 @@ public class NetActivityPresenter extends NetActivityContract.Presenter implemen
         // jsonBean={userName:15158137302,password:123456}
         Map<String, String> map = new HashMap<>();
         map.put("userName", "15158137302");
-        map.put("password", "123456");
+        map.put("password", "1234567");
         //最后一个参数是 请求id  不输入默认（）
         ComRequestUtil.postCommonInfo(Api.APPUSER_CHECKLOGIN, Map2String(map), mContext, this);
     }
@@ -46,21 +45,20 @@ public class NetActivityPresenter extends NetActivityContract.Presenter implemen
      */
     @Override
     public void requestDemo2() {
-        // url =http://106.14.20.156:8083/MiddleServer/queryAppCompanyByCode.htm?jsonBean=
-        // {isBingCompanyCode:'20170314-124521-5',companyCode:'20170314-115614-2'}
+      //http://ataits.com:8089/AppCloudServer/appQueryByEmployeeId.htm?
+        // jsonBean={employeeId:'61e2eb25-922a-49d4-8ff0-77bd638f79f2'}
+
 
         Map<String, String> map = new HashMap<>();
-        map.put("isBingCompanyCode", "20170314-124521-5");
-        map.put("companyCode", "20170314-115614-2");
+        map.put("employeeId", "61e2eb25-922a-49d4-8ff0-77bd638f79f2");
+       // map.put("companyCode", "20170314-115614-2");
         //这里是自定义baseUrl的请求 Api.BASE_ZHONGJIAN_URL
         //如果是默认请求 直接使用基类已经初始化的httpTask
         //项目中示例： Observable observable = httpTask.requestRelationlog(pram);
 //        HttpPresenter<List<ShenQingInfoModel>> httpPresenter=new HttpPresenter<>();
 //        httpPresenter.request(observable, Constants.REQUESTID_0,this,this);
-        if (yibanTask == null) {
-            yibanTask = HttpClient.createRequest(HttpTask.class, Api.BASE_ZHONGJIAN_URL);
-        }
-        Observable observable = yibanTask.requestCompanybycode(Map2String(map));
+
+        Observable observable = httpTask.requestCompanybycode(Map2String(map));
         // HttpPresenter<请求成功返回的对象，也可以是list<对象>>  如： HttpPresenter<List<CompanyInfoModle>>
         HttpPresenter<CompanyInfoModle> httpPresenter = new HttpPresenter<>();
         httpPresenter.request(observable, Constants.REQUESTID_0, this, mContext);
